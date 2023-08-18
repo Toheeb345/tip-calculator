@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-3x32.png">
+  <link rel="stylesheet" href="./style.css">
+  
+  <title>Tip calculator app</title>
+
+  <!-- <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style> -->
+</head>
+<body>
+
+  <div class="container">
+    <header>TIP <br> CALC🧮</header>
+
+    <div class="body">
+      <div class="first-half">
+      <div class="bill">
+        <label for="">Bill</label>
+        <div class="input">
+          <input type="number" placeholder="0">
+          <img src="./images/icon-dollar.svg" alt="">
+        </div>
+      </div>
+
+      <div class="">
+        <p>Select Tip %</p>
+        <div class="btns">
+          <button value="5">5%</button>
+          <button value="10">10%</button>
+          <button value="15">15%</button>
+          <button value="25">25%</button>
+          <button value="50">50%</button>
+          <input class="custom" type="number" placeholder="Custom">
+        </div>
+      </div>
+
+      <div class="number">
+        <div class="num-labels">
+          <label>Number of People</label>
+          <label class="error">Cant't be 0</label>
+        </div>
+        
+        <div class="input">
+          <input type="number" class="number-input" placeholder="0">
+          <img src="./images/icon-person.svg" alt="">
+        </div>
+      </div>
+    </div>
+
+    <div class="second-half">
+      <div class="">
+      <div class="one-person">
+        <div class="desc">
+          <p>Tip Amount</p>
+          <p>/ person</p>
+        </div>
+        <div class="output-one">
+          <p class="amount-person">$0.00</p>
+        </div>
+      </div>
+
+      <div class="total">
+        <div class="desc">
+          <p>Total</p>
+          <p>/ person</p>
+        </div>
+        <div class="output-two">
+          <p class="amount-total">$0.00</p>
+        </div>
+      </div>
+    </div>
+      <button type="reset" class="reset">CALCULATE</button>
+    </div>
+
+    </div>
+  </div>
+
+  
+  <script src="./app.js"></script>
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+</body>
+</html>

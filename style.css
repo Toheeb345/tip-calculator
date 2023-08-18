@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+
+
+:root{
+    --StrongCyan: hsl(172, 67%, 45%);
+    --Verydarkcyan: hsl(183, 100%, 15%);
+    --Darkgrayishcyan: hsl(186, 14%, 43%);
+    --Grayishcyan: hsl(184, 14%, 56%);
+    --Lightgrayishcyan: hsl(185, 41%, 84%);
+    --Verylightgrayishcyan: hsl(189, 41%, 97%);
+    --White: hsl(0, 0%, 100%);
+
+}
+body{
+    font-family: 'Space Mono', monospace;
+    background: var(--Lightgrayishcyan);
+    min-height: 100vh;
+    /* overflow: hidden; */
+    /* width: 100%; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.body{
+    background: var(--White);
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+header{
+    text-align: center;
+    font-size: 25px;
+    color: var(--Darkgrayishcyan);
+    font-weight: bold;
+    letter-spacing: 10px;
+    line-height: 25px;
+    padding-bottom: 30px;
+}
+.bill input, .number input{
+    width: 100%;
+    height: 35px;
+    background: var(--Verylightgrayishcyan);
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
+    appearance: textfield;
+    font-size: 20px;
+    
+}
+input{
+    text-align: right;
+    font-weight: bold;
+    color: var(--Verydarkcyan);
+    border: none;
+    outline: none;
+    border-radius: 5px;
+
+}
+input:focus{
+    outline: 2px solid var(--StrongCyan);
+}
+.input{
+    position: relative;
+}
+.input img{
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+input::placeholder{
+    text-align: start;
+}
+.btns{
+    display: grid;
+    grid-template-columns: repeat(2,100px);
+    place-content: center;
+    grid-gap: 10px;
+}
+.btns > *{
+    padding: 6px;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--Verydarkcyan);
+    color: var(--White);
+    font-size: 16px;
+    cursor: pointer;
+}
+.btns input{
+    background-color: var(--Verylightgrayishcyan);
+    color: black;
+}
+
+.second-half{
+    background-color: var(--Verydarkcyan);
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: space-between;
+}
+.one-person, .total{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.desc{
+    line-height: 5px;
+}
+.desc p:nth-child(1){
+    color: var(--White);
+}
+.desc p:nth-child(2){
+    color: var(--Grayishcyan);
+}
+.output-one, .output-two{
+    font-size: 25px;
+    color: var(--StrongCyan);
+}
+.first-half{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.bill, .number{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+button:hover{
+    background-color: var(--StrongCyan);
+}
+button.active{
+    background-color: var(--StrongCyan);
+}
+.reset{
+    width: 100%;
+    padding: 13px 10px;
+    background: var(--StrongCyan);
+    color: var(--Verydarkcyan);
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.num-labels{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+}
+.num-labels .error{
+    color: red;
+    display: none;
+}
+.error.err-active{
+    display: block;
+}
+.number-input::placeholder, .input input::placeholder{
+    text-align: right;
+    color: var(--Verydarkcyan);
+}
+.number-input.err-active{
+    border: 1px solid red;
+}
+
+@media only screen and (min-width: 785px){
+    .body{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        /* max-width: 1000px; */
+        justify-content: center;
+        align-items: center;
+    }
+    .btns{
+        grid-template-columns: repeat(3, 100px);
+    }
+    .first-half{
+        width: 300px;
+    }
+    .second-half{
+        width: 300px;
+        height: 300px;
+    }
+    .reset{
+        justify-self: flex-end;
+        align-self: flex-end;
+    }
+}
